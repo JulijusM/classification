@@ -40,6 +40,15 @@ def build_marathon_examples(file_name):
         examples.append(a)
     return examples
 
-
+def divide_80_20(examples):
+    sample_indices = random.sample(range(len(examples)),
+                                  len(examples)//5)
+    training_set, test_set = [], []
+    for i in range(len(examples)):
+        if i in sample_indices:
+            test_set.append(examples[i])
+        else:
+            training_set.append(examples[i])
+    return training_set, test_set
 
 
