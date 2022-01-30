@@ -6,4 +6,3 @@ import sklearn.linear_model as sklm
 import sklearn.metrics as skm
 
 
-print('hello world')
